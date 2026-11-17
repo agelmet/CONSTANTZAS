@@ -1,0 +1,16 @@
+{
+ "source": {
+  "kind": "file",
+  "ref": "assets/img/constantzas-house-icon.svg"
+ },
+ "source_md5": "a7bc639f84bd64b253a70b7ee46daae0",
+ "version": "ba67e2b0",
+ "tile": null,
+ "crop": null,
+ "header": [
+  "inline",
+  "index.html",
+  "ab349bbc0ef82297c2f7bc3f565a031a"
+ ],
+ "made": "2026-11-17"
+}
