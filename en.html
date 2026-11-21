@@ -80,6 +80,41 @@
 }
 @media (prefers-reduced-motion:reduce){.hss .hs,.hss .hs img{transition:none!important;transform:none!important}.hsdot.on i::after{animation:none;transform:scaleX(1)}}
 </style>
+<style id="r3-css">
+.st-m{padding:0}
+.book{position:relative;background:#101C27}
+.pbg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.pbg-p{position:absolute;top:-14%;bottom:-14%;left:0;right:0;will-change:transform}
+.pbg img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.pbg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,24,34,.88) 0%,rgba(14,24,34,.62) 48%,rgba(14,24,34,.35) 100%)}
+.book .bk-g{position:relative;z-index:1}
+@media (max-width:900px){.pbg::after{background:rgba(14,24,34,.74)}}
+
+/* «Το σπίτι» slider */
+.sls{position:relative;width:100%;max-width:620px;margin-left:auto}
+.sls-box{position:relative;border-radius:22px;overflow:hidden;background:var(--sand);box-shadow:0 34px 70px -36px rgba(20,25,30,.55)}
+.sld{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
+.sld.on{opacity:1;z-index:1}
+.sld .ph{display:block;width:100%;height:100%;background:none}
+.sld img{width:100%;height:100%;object-fit:cover;transform:scale(1.07);transition:transform 5s cubic-bezier(.2,.6,.3,1)}
+.sld.on img{transform:scale(1)}
+.sls-a{position:absolute;top:50%;z-index:3;width:46px;height:46px;margin-top:-23px;border:0;border-radius:50%;background:rgba(255,255,255,.88);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -10px rgba(0,0,0,.5);opacity:0;transition:opacity .3s,transform .3s}
+.sls-a svg{width:22px;height:22px}.sls-p{left:14px}.sls-n{right:14px}
+.sls-box:hover .sls-a,.sls-a:focus-visible{opacity:1}
+@media (hover:none){.sls-a{opacity:1;width:40px;height:40px;margin-top:-20px}}
+.sls-u{display:flex;align-items:baseline;gap:14px;margin-top:16px;font-size:14px;color:var(--mute)}
+.sls-c{font-variant-numeric:tabular-nums;letter-spacing:.04em}.sls-c b{color:var(--ink);font-weight:600}
+.sls-t{font-family:var(--fd);font-size:19px;color:var(--ink);transition:opacity .4s}
+.sls-bars{display:flex;gap:6px;margin-top:12px}
+.slb{flex:1;height:22px;border:0;background:none;padding:0;cursor:pointer;display:grid;align-items:center}
+.slb i{display:block;height:2px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
+.slb i::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:left}
+.slb.done i::after{transform:scaleX(1)}.slb.on i::after{animation:slBar var(--slT,3.6s) linear forwards}
+.sls.pause .slb.on i::after{animation-play-state:paused}
+@keyframes slBar{to{transform:scaleX(1)}}
+@media (max-width:900px){.sls{margin:0 auto}.sls-box{border-radius:16px}}
+@media (prefers-reduced-motion:reduce){.sld,.sld img{transition:none!important;transform:none!important}.slb.on i::after{animation:none;transform:scaleX(1)}}
+</style>
 </head>
 <body>
 <!-- hero v2 (21 Nov 2026): Airbnb’s first photos rotate every ~2.6 s · CONSTANTZA'S HOUSE · Advon Media · style «Ασβέστης & Αιγαίο» (Plum Guide / Le Collectionist listing structure × Cycladic editorial) · opening «Καμάρα» (the arch draws, the sunset shows through it, then the view zooms through the arch) · signatures: split-level house drawing synced to scroll, room-by-room index, scroll-drawn walk to the harbour -->
@@ -171,10 +206,7 @@
    <p class="rv" data-en="It stands in a quiet, traditional neighbourhood where locals live, yet everything is on foot: the main bus stop is a few steps away, and the whitewashed lanes, cafés and harbour of Naousa are four to five minutes’ walk. Guests describe it the same way, again and again: <q>centrally located and yet quiet</q>.">It stands in a quiet, traditional neighbourhood where locals live, yet everything is on foot: the main bus stop is a few steps away, and the whitewashed lanes, cafés and harbour of Naousa are four to five minutes’ walk. Guests describe it the same way, again and again: <q>centrally located and yet quiet</q>.</p>
    <a class="tlink rv" href="#epipeda"><span data-en="See how the house is laid out">See how the house is laid out</span><svg><use href="#ar"/></svg></a>
   </div>
-  <div class="st-m">
-   <svg class="st-arch" viewBox="0 0 100 140" aria-hidden="true" preserveAspectRatio="none"><path d="M2 140V50a48 48 0 0 1 96 0v90" fill="none" vector-effect="non-scaling-stroke"/></svg>
-   <figure class="pol"><a class="ph" href="assets/img/constantzas-house-naousa-paros-saloni-mpalkoni-1200.webp"><img src="assets/img/constantzas-house-naousa-paros-saloni-mpalkoni-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-saloni-mpalkoni-720.webp 720w, assets/img/constantzas-house-naousa-paros-saloni-mpalkoni-1200.webp 1200w" sizes="(max-width:900px) 88vw, 40vw" width="1200" height="900" alt="The living room of Constantza&#x27;s House with the balcony door and white curtains" data-en-alt="The living room of Constantza&#x27;s House with the balcony door and white curtains" loading="lazy" decoding="async"></a><figcaption data-en="The living room, late afternoon">The living room, late afternoon</figcaption></figure>
-  </div>
+  <div class="st-m"><div class="sls rv" aria-roledescription="carousel" aria-label="Photos of the house" data-en-aria="Photos of the house"><div class="sls-box" style="aspect-ratio:4/3"><figure class="sld on" data-cap="Η καμάρα και η τραπεζαρία" data-en-cap="The arch and the dining area"><a class="ph" href="assets/img/constantzas-house-naousa-paros-kamara-trapezaria-hd-1800.webp"><img src="assets/img/constantzas-house-naousa-paros-kamara-trapezaria-hd-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-kamara-trapezaria-hd-720.webp 720w, assets/img/constantzas-house-naousa-paros-kamara-trapezaria-hd-1200.webp 1200w, assets/img/constantzas-house-naousa-paros-kamara-trapezaria-hd-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="2560" height="1920" alt="The arch and the dining area seen from the living room" data-en-alt="The arch and the dining area seen from the living room" loading="lazy" decoding="async"></a></figure><figure class="sld" data-cap="Το υπνοδωμάτιο με το διπλό κρεβάτι" data-en-cap="The bedroom with the double bed"><a class="ph" href="assets/img/constantzas-house-naousa-paros-diplo-ypnodomatio-hd-1800.webp"><img src="assets/img/constantzas-house-naousa-paros-diplo-ypnodomatio-hd-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-diplo-ypnodomatio-hd-720.webp 720w, assets/img/constantzas-house-naousa-paros-diplo-ypnodomatio-hd-1200.webp 1200w, assets/img/constantzas-house-naousa-paros-diplo-ypnodomatio-hd-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="2560" height="1920" alt="The bedroom with the double bed and the jute rug" data-en-alt="The bedroom with the double bed and the jute rug" loading="lazy" decoding="async"></a></figure><figure class="sld" data-cap="Η κουζίνα, σε δικό της επίπεδο" data-en-cap="The kitchen, on its own level"><a class="ph" href="assets/img/constantzas-house-naousa-paros-kouzina-hd-1800.webp"><img src="assets/img/constantzas-house-naousa-paros-kouzina-hd-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-kouzina-hd-720.webp 720w, assets/img/constantzas-house-naousa-paros-kouzina-hd-1200.webp 1200w, assets/img/constantzas-house-naousa-paros-kouzina-hd-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="2560" height="1920" alt="The kitchen with its wooden counter and patterned tiles" data-en-alt="The kitchen with its wooden counter and patterned tiles" loading="lazy" decoding="async"></a></figure><figure class="sld" data-cap="Το δεύτερο υπνοδωμάτιο" data-en-cap="The second bedroom"><a class="ph" href="assets/img/constantzas-house-naousa-paros-dyo-mona-krevatia-hd-1800.webp"><img src="assets/img/constantzas-house-naousa-paros-dyo-mona-krevatia-hd-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-dyo-mona-krevatia-hd-720.webp 720w, assets/img/constantzas-house-naousa-paros-dyo-mona-krevatia-hd-1200.webp 1200w, assets/img/constantzas-house-naousa-paros-dyo-mona-krevatia-hd-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="2560" height="1920" alt="The second bedroom with two single beds" data-en-alt="The second bedroom with two single beds" loading="lazy" decoding="async"></a></figure><figure class="sld" data-cap="Τραπέζι για τέσσερις" data-en-cap="A table for four"><a class="ph" href="assets/img/constantzas-house-naousa-paros-trapezaria-porta-hd-1800.webp"><img src="assets/img/constantzas-house-naousa-paros-trapezaria-porta-hd-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-trapezaria-porta-hd-720.webp 720w, assets/img/constantzas-house-naousa-paros-trapezaria-porta-hd-1200.webp 1200w, assets/img/constantzas-house-naousa-paros-trapezaria-porta-hd-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="2560" height="1920" alt="The dining area with the round table and the wooden door" data-en-alt="The dining area with the round table and the wooden door" loading="lazy" decoding="async"></a></figure><figure class="sld" data-cap="Η βεράντα, στο ηλιοβασίλεμα" data-en-cap="The terrace at sunset"><a class="ph" href="assets/img/constantzas-house-naousa-paros-veranta-iliovasilema-hd-1800.webp"><img src="assets/img/constantzas-house-naousa-paros-veranta-iliovasilema-hd-1200.webp" srcset="assets/img/constantzas-house-naousa-paros-veranta-iliovasilema-hd-720.webp 720w, assets/img/constantzas-house-naousa-paros-veranta-iliovasilema-hd-1200.webp 1200w, assets/img/constantzas-house-naousa-paros-veranta-iliovasilema-hd-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="2560" height="1920" alt="The terrace of the house at sunset" data-en-alt="The terrace of the house at sunset" loading="lazy" decoding="async"></a></figure><button type="button" class="sls-a sls-p" aria-label="Previous" data-en-aria="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" class="sls-a sls-n" aria-label="Next" data-en-aria="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div><div class="sls-u"><span class="sls-c"><b class="sls-i">01</b> / 06</span><span class="sls-t" data-en="The arch and the dining area">The arch and the dining area</span></div><div class="sls-bars"><button type="button" class="slb on" aria-label="Photo 1" data-en-aria="Photo 1"><i></i></button><button type="button" class="slb" aria-label="Photo 2" data-en-aria="Photo 2"><i></i></button><button type="button" class="slb" aria-label="Photo 3" data-en-aria="Photo 3"><i></i></button><button type="button" class="slb" aria-label="Photo 4" data-en-aria="Photo 4"><i></i></button><button type="button" class="slb" aria-label="Photo 5" data-en-aria="Photo 5"><i></i></button><button type="button" class="slb" aria-label="Photo 6" data-en-aria="Photo 6"><i></i></button></div></div></div>
  </div>
 </section>
 
@@ -299,7 +331,7 @@
 </section>
 
 <!-- ===== BOOKING ===== -->
-<section class="sec book" id="kratisi">
+<section class="sec book" id="kratisi"><div class="pbg" aria-hidden="true"><div class="pbg-p" data-par=".2"><img src="assets/img/constantzas-house-naousa-paros-veranta-souroupo-bg-hd-1600.webp" srcset="assets/img/constantzas-house-naousa-paros-veranta-souroupo-bg-hd-960.webp 960w, assets/img/constantzas-house-naousa-paros-veranta-souroupo-bg-hd-1600.webp 1600w, assets/img/constantzas-house-naousa-paros-veranta-souroupo-bg-hd-2400.webp 2400w" sizes="100vw" width="2560" height="1920" alt="" loading="lazy" decoding="async"></div></div>
  <div class="wrap bk-g">
   <div class="bk-t">
    <span class="kick lt rv" data-en="Book">Book</span>
@@ -357,6 +389,19 @@ B.forEach(function(b,j){b.addEventListener('click',function(){set(j);loop()})});
 var hd=document.querySelector('.hd');function hh(){if(hd)document.documentElement.style.setProperty('--hdh',hd.offsetHeight+'px')}hh();addEventListener('resize',hh);
 if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;loop()}).observe(h);
 document.addEventListener('visibilitychange',loop);loop()})();</script>
+<script id="r3-js">(function(){document.querySelectorAll('.sls').forEach(function(w){var F=[].slice.call(w.querySelectorAll('.sld')),B=[].slice.call(w.querySelectorAll('.slb')),I=w.querySelector('.sls-i'),C=w.querySelector('.sls-t'),i=0,t=null,T=3600,vis=false,hov=false;
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;w.style.setProperty('--slT',T+'ms');
+function en(){return document.documentElement.lang==='en'}
+function set(n){F[i].classList.remove('on');i=(n+F.length)%F.length;F[i].classList.add('on');B.forEach(function(b,j){b.classList.toggle('done',j<i);b.classList.remove('on')});void B[i].offsetWidth;B[i].classList.add('on');
+ I.textContent=(i<9?'0':'')+(i+1);var c=F[i].getAttribute(en()?'data-en-cap':'data-cap');C.textContent=c;C.setAttribute('data-el',F[i].getAttribute('data-cap'));C.setAttribute('data-en',F[i].getAttribute('data-en-cap'));
+ var nx=F[(i+1)%F.length].querySelector('img');if(nx.loading==='lazy')nx.loading='eager'}
+function loop(){clearTimeout(t);w.classList.toggle('pause',hov);if(RM||!vis||hov||document.hidden)return;t=setTimeout(function(){set(i+1);loop()},T)}
+w.querySelector('.sls-p').addEventListener('click',function(){set(i-1);loop()});w.querySelector('.sls-n').addEventListener('click',function(){set(i+1);loop()});
+B.forEach(function(b,j){b.addEventListener('click',function(){set(j);loop()})});
+var box=w.querySelector('.sls-box');box.addEventListener('mouseenter',function(){hov=true;loop()});box.addEventListener('mouseleave',function(){hov=false;loop()});
+var sx=null;box.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});box.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){set(i+(dx<0?1:-1));loop()}sx=null},{passive:true});
+if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)F.forEach(function(f){var m=f.querySelector('img');m.loading='eager'});loop()},{threshold:.25}).observe(w);
+document.addEventListener('visibilitychange',loop)})})();</script>
 <script id="advon-en-nav">/* flags = links between / and /en (Google ranks both) */document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button[data-l],button[data-lang],a[data-l],a[data-lang],[data-set-lang]");if(!b)return;var l=b.getAttribute("data-l")||b.getAttribute("data-lang")||b.getAttribute("data-set-lang");if(l==="en"||(l!=="el"&&l!=="en"))return;e.preventDefault();e.stopImmediatePropagation();location.href=(l==="en"?"en":"./")+location.hash},true)</script>
 </body>
 </html>
